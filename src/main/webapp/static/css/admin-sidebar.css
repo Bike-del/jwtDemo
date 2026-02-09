@@ -1,0 +1,61 @@
+/* ===== Admin Layout ===== */
+body {
+    overflow-x: hidden;
+}
+
+.admin-wrapper {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* ===== Sidebar ===== */
+.admin-sidebar {
+    width: 240px;
+    background: #212529;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+}
+
+.admin-sidebar h4 {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #343a40;
+}
+
+.admin-sidebar a {
+    display: block;
+    padding: 12px 20px;
+    color: #adb5bd;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.admin-sidebar a:hover,
+.admin-sidebar a.active {
+    background: #343a40;
+    color: #fff;
+}
+
+/* ===== Page Content ===== */
+.admin-content {
+    margin-left: 240px;
+    width: 100%;
+    padding: 20px;
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 768px) {
+    .admin-sidebar {
+        left: -240px;
+        transition: 0.3s;
+    }
+    .admin-sidebar.show {
+        left: 0;
+    }
+    .admin-content {
+        margin-left: 0;
+    }
+}
